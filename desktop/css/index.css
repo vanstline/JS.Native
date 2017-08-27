@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    user-select: none;
+    /*background: url(../img/bg1.jpg);*/
+    background-size: cover;
+}
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+p {
+    margin: 0;
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+#bg img {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#paths {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40px;
+    text-indent: 10px;
+}
+#paths a {
+    /*background: blue;*/
+    color: rgb(19, 227, 46);
+}
+#paths li a {
+    font: 16px/20px arial,'宋体';
+    padding: 5px;
+}
+#back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 5px;
+}
+#paths span {
+
+}
+#paths ul {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 0;
+}
+#paths ul li {
+    float: left;
+}
+#contextmenu {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 140px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+#contextmenu li {
+    position: relative;
+    margin: 2px;
+    text-indent: 5px;
+    font: 16px/30px arial,'宋体';
+    color: #fff;
+    cursor: pointer;
+}
+#contextmenu li.active {
+    background: rgb(66, 166, 205);
+    color: #fff;
+}
+#contextmenu ul {
+    position: absolute;
+    left: 135px;
+    top: 0px;
+    width: 140px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+#contextmenu li.splitline {
+    border-bottom: 1px solid #aaa;
+    height: 0;
+    padding: 0;
+    margin: 2px;
+}
+/*🗑回收站*/
+#list {
+    position: relative;
+    margin-top: 30px;
+}
+#list li {
+    position: absolute;
+    border: 1px solid transparent;
+    width: 100px;
+    height: 100px;
+    font: 20px/30px arial,'宋体';
+    cursor: pointer;
+    border-radius: 10px;
+}
+#list .floder {
+    background: url(../img/file0.png) no-repeat  15px 10px;
+    background-size: 70px 70px ;
+}
+#list .txt {
+    background: url(../img/txt.png) no-repeat  15px 0;
+    background-size: 70px 70px ;
+}
+#list .image {
+    background: url(../img/img.png) no-repeat  15px 0;
+    background-size: 70px 70px ;
+}
+#list .video {
+    background: url(../img/video.png) no-repeat  15px 0;
+    background-size: 70px 70px ;
+}
+#list .audio {
+    background: url(../img/audio.png) no-repeat  15px 0;
+    background-size: 70px 70px ;
+}
+#list li input {
+    position: absolute;
+    top: 75px;
+    left: 10px;
+    width: 80px;
+    display: none;
+    text-align: center;
+}
+.trash {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    font: 20px/30px arial,'宋体';
+    background: url(../img/trash.png) no-repeat;
+    background-size: 65px 65px ;
+    background-position: 20px 10px;
+}
+#trash  p,
+#list li p {
+    margin-top: 70px;
+    text-align: center;
+    font: 14px/30px arial,'宋体';
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#list li:hover {
+
+    background-color: rgba(238, 238, 238, 0.3);
+}
+#list li.active {
+    padding: 0;
+    background-color: rgba(4, 234, 249, 0.3);
+    border: 1px solid rgb(4, 234, 249);
+}
+
+
+
+/*上传*/
+#upload {
+    display: none;
+}
+
+
+#fileDetail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background: rgba(20, 169, 215, 0.4);
+
+}
+#fileDetailsC {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#fileDetailCols {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    font: 14px/20px arial;
+    border-radius: 50%;
+    background: rgb(26, 224, 212);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*重名弹窗*/
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0);
+}
+#info {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    margin-left: -150px;
+    width: 300px;
+    height: 50px;
+    font: 16px/50px arial,'宋体';
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/*框选*/
+.frame {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px dashed rgba(30, 126, 226, 1);
+    background-color: rgba(30, 126, 226, .2);
+}
+
+
+/*子级窗口*/
+#wind {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -200px;
+    width: 400px;
+    height: 300px;
+    background: red;
+}

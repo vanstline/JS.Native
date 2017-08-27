@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="bg">
+    <img src="img/bg1.jpg" alt="">
+</div>
+<div id="paths">
+    <ul id="crumbs"></ul>
+</div>
+<ul id="contextmenu"></ul>
+<ul id="list">
+</ul>
+<!-- <div id="trash">
+    <p>回收站</p>
+</div> -->
+<!-- 重名弹窗 -->
+<div id="wind">
+    <title></title>
+</div>
+<div class="mask">
+    <div id="info">
+        重名了，请重新输入;
+    </div>
+</div>
+<!-- 上传文件 -->
+<input type="file" id="upload">
+<div id="fileDetail">
+    <div id="fileDetailsC"></div>
+    <a href="javascript:;" id="fileDetailCols">X</a>
+</div>
+<!-- 运动工具 -->
+<script src="js/startmove.js"></script>
+<!-- 拼音排序 -->
+<script src="js/pinyin.js"></script>
+<!-- 存放数据 -->
+<script src="js/data.js"></script>
+<!-- 操作数据-只操作数据 -->
+<script src="js/model.js"></script>
+<!-- 处理业务逻辑，封装index.js中复用的内容 -->
+<script src="js/function3.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
